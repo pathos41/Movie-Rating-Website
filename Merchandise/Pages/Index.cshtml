@@ -1,0 +1,10 @@
+﻿@page
+@using MovieSite.Components
+@model IndexModel
+@{
+  ViewData["Title"] = "Home page";
+}
+
+@(await Html.RenderComponentAsync<MovieList>(RenderMode.ServerPrerendered))
+
+<script src="_framework/blazor.server.js"></script>
